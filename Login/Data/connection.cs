@@ -39,5 +39,9 @@ namespace Login.Data
         public void closeConnection() {
         
         }
+        public void comprobarLogin()
+        {
+
+        }
     }
 }
