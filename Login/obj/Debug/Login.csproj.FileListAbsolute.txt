@@ -40,3 +40,5 @@ C:\Users\juarm\source\repos\Login\Login\obj\Debug\Login.csproj.CoreCompileInputs
 C:\Users\juarm\source\repos\Login\Login\obj\Debug\Login.csproj.CopyComplete
 C:\Users\juarm\source\repos\Login\Login\obj\Debug\Login.exe
 C:\Users\juarm\source\repos\Login\Login\obj\Debug\Login.pdb
+C:\Users\juarm\source\repos\Login\Login\obj\Debug\Login.Form1.resources
+C:\Users\juarm\source\repos\Login\Login\obj\Debug\Login.Interfaz.resources

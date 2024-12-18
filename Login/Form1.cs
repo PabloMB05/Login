@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Login.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,9 @@ namespace Login
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            String nombre = textBox1.Text;
+            String contrasena =textBox2.Text;
+            connection.comprobarLogin(nombre, contrasena);
         }
     }
 }
