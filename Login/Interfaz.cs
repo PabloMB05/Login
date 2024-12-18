@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Login
 {
-    public partial class Form1 : Form
+    public partial class Interfaz : Form
     {
-        public Form1()
+        public Interfaz()
         {
             InitializeComponent();
-            Data.connection.openConnection();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
