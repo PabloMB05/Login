@@ -21,27 +21,49 @@ namespace Login.Data
         //realizamos la conecion
         public static MySqlConnection connMaster = new MySqlConnection();
 
-
-        public static void openConnection()
-        {
-
+        public static MySqlConnection DataSource(){
             String connectionString = $"server={server}; database={database} ;user={user}; password={password}";
             connMaster = new MySqlConnection(connectionString);
-            connMaster.Open();
-
-            if (connMaster.State == ConnectionState.Open)
+            return connMaster;
+        }
+        public static void openConnection(){
+            try
             {
-                MessageBox.Show("conexion establecida");
+                DataSource();
+                connMaster.Open();
+
+                if (connMaster.State != ConnectionState.Open)
+                {
+                    MessageBox.Show("conexion fallida");
+                }
             }
-            else
+            catch (Exception e)
             {
                 MessageBox.Show("conexion fallida");
             }
         }
-        public void closeConnection()
-        {
 
+        public static void closeConnection(){
+            try
+            {
+                DataSource();
+                connMaster.Close();
+
+                if (connMaster.State == ConnectionState.Open)
+                {
+                    MessageBox.Show("conexion Cerrada");
+                }
+                else
+                {
+                    MessageBox.Show("conexion fallida");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("conexion fallida");
+            }
         }
+    
         public static void comprobarLogin(String nombre, String contrasena)
         {
             try
